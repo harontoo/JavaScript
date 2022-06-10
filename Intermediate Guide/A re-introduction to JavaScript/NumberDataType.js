@@ -1,4 +1,4 @@
-//Number data type
+//The Number DataType IN JavaScript
 console.log(3/2);//Produces an integer
 console.log(Math.floor(3/2));//Produces a Number
 console.log(0.1+0.2);
