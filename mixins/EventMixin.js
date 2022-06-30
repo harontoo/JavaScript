@@ -20,7 +20,7 @@ off(eventName,handler)
 {
     let handlers = this._eventHandlers?.[eventName];
     if(!handlers) return;
-    for(let i = 0; i<handler.length; i++)
+    for(let i = 0; i<handlers.length; i++)
     {
         if(handlers[i] === handler)
         {
@@ -59,6 +59,8 @@ class Menu {
 Object.assign(Menu.prototype,EventMixin);
 
 let menu = new Menu();
-menu.on('select',(value)=>console.log(`Value selected : ${value}`));
 
+let handler =(value)=>console.log(`Value selected : ${value}`)
+menu.on('select',handler);
+//menu.off('select',handler);
 menu.choose('123');
